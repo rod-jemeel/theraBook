@@ -88,18 +88,6 @@ const Footer = () => {
               Copyright © {year} developed by CFN all rights
               reserved.
             </p>
-
-            <div className="flex items-center gap-3 mt-4">
-              {socialLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.path}
-                  className=" w-[36px] h-[36px] rounded-full border border-solid border-[#181A1E] flex  items-center justify-center  group hover:bg-[#0067FF] hover:border-none"
-                >
-                  {link.icon}
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
       </div>
