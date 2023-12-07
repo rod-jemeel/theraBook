@@ -85,7 +85,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="" />
             <p className="text-[16px] leading-7 font-[400] text-textColor mt-4">
-              Copyright © {year} developed by Muhibur Rahman all rights
+              Copyright © {year} developed by CFN all rights
               reserved.
             </p>
 
@@ -100,60 +100,6 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-          </div>
-
-          <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] text-headingColor mb-6">
-              Quick Links
-            </h2>
-            <ul>
-              {quickLinks01.map((item, index) => (
-                <li key={index} className="mb-4">
-                  <Link
-                    className="text-[16px] leading-7 font-[400] text-textColor"
-                    to={item.path}
-                  >
-                    {item.display}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] text-headingColor mb-6">
-              I want to:
-            </h2>
-            <ul>
-              {quickLinks02.map((item, index) => (
-                <li key={index} className="mb-4">
-                  <Link
-                    className="text-[16px] leading-7 font-[400] text-textColor"
-                    to={item.path}
-                  >
-                    {item.display}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] text-headingColor mb-6">
-              Support
-            </h2>
-            <ul>
-              {quickLinks03.map((item, index) => (
-                <li key={index} className="mb-4">
-                  <Link
-                    className="text-[16px] leading-7 font-[400] text-textColor"
-                    to={item.path}
-                  >
-                    {item.display}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>
