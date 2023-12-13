@@ -1,23 +1,32 @@
-import { useEffect, useState } from "react";
-import { token } from "../config";
+import { useEffect, useState, useContext } from "react";
+import { AuthContext } from "./../context/AuthContext";
+import { BASE_URL } from "../config";
 
-const useFetchData = url => {
+const useFetchData = (url) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const { token: authToken } = useContext(AuthContext);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
+        const headers = {};
+        
+        // Include authorization header if token is available
+        if (authToken) {
+          headers.Authorization = `Bearer ${authToken}`;
+        }
+
         const res = await fetch(url, {
-          headers: { Authorization: `Bearer ${token}` },
+          headers,
         });
 
         const result = await res.json();
 
         if (!res.ok) {
-          throw new Error(result.message + " 🤢");
+          throw new Error(result.message);
         }
 
         setData(result.data);
@@ -29,7 +38,7 @@ const useFetchData = url => {
     };
 
     fetchData();
-  }, [url]);
+  }, [url, authToken]); // Include authToken in the dependency array
 
   return {
     data,

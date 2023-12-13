@@ -10,7 +10,13 @@
 
 @layer components {
   .btn {
-    @apply bg-buttonBgColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px];
+    @apply bg-buttonBgColor py-[15px] px-[30px] rounded-[10px] text-white font-[300] mt-[38px];
+    transition: background-color 0.3s ease;
+    transition: padding 0.3s ease;
+  }
+  
+  .btn:hover {
+    @apply bg-[#6505C4] px-[45px];
   }
 
   .container {
@@ -18,15 +24,15 @@
   }
 
   .header {
-    @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-cover bg-center w-full h-[100px] leading-[100px];
+    @apply w-full h-[100px] leading-[100px];
   }
 
   .hero__section {
-    @apply bg-[url('./assets/images/hero-bg.png')] bg-no-repeat bg-cover bg-center;
+    @apply bg-[#f9f9f9];
   }
 
   .text__para {
-    @apply text-[18px] leading-[30px] text-textColor font-[400] mt-[18px];
+    @apply text-[18px] leading-[30px] text-textColor font-[100] mt-[18px];
   }
 
   .heading {
@@ -38,7 +44,7 @@
   }
 
   .form__input {
-    @apply w-full px-4 py-3 border border-solid border-[#0066ff61] focus:outline-none focus:border-[#0067FF] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer;
+    @apply w-full px-4 py-3 border border-solid border-[#6505C4] focus:outline-none focus:border-[#6505C4] text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md cursor-pointer;
   }
 }
 

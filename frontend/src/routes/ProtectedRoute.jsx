@@ -15,4 +15,6 @@ function ProtectedRoute({ children, allowedRoles }) {
   return accessibleRoute;
 }
 
+
+
 export default ProtectedRoute;

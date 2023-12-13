@@ -6,8 +6,8 @@ const DoctorAbout = ({ about, name, qualifications, experiences }) => {
     <div>
       <div>
         <h3 className="text-[20px] leading-[30px] text-headingColor font-semibold flex gap-2 items-center">
-          About of
-          <span className="text-irisBlueColor font-bold text-[24px] leading-9">
+          Information of
+          <span className="text-[#9205C4]  font-bold text-[24px] leading-9">
             {name}
           </span>
         </h3>
@@ -25,7 +25,7 @@ const DoctorAbout = ({ about, name, qualifications, experiences }) => {
               className="flex sm:justify-between sm:items-end flex-col sm:flex-row  md:gap-5 mb-[30px]"
             >
               <div>
-                <span className="text-irisBlueColor text-[15px] leading-6 font-semibold">
+                <span className="text-[#9205C4] r text-[15px] leading-6 font-semibold">
                   {formatDate(item.startingDate, { year: "numeric" })}-
                   {formatDate(item.endingDate, { year: "numeric" })}
                 </span>

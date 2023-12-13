@@ -4,8 +4,7 @@ const Contact = () => {
       <div className="px-4 mx-auto max-w-screen-md">
         <h2 className="heading text-center ">Contact Us</h2>
         <p className="mb-8 lg:mb-16 font-light text-center text__para">
-          Got a technical issue? Want to send feedback about a beta feature? Let
-          us know.
+        Do you have any concerns or questions about TheraBook? We're here to help!
         </p>
         <form action="#" className="space-y-8">
           <div>

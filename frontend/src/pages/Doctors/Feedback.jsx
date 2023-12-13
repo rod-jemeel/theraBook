@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import FeedbackForm from "./FeedbackForm";
-import avatar from "../../assets/images/avatar-icon.png";
 import { useState } from "react";
 import { formatDate } from "../../utils/formatDate";
 import { AiFillStar } from "react-icons/ai";

@@ -12,6 +12,9 @@ import DoctorDetails from "../pages/Doctors/DoctorDetails";
 import Contact from "../pages/Contact";
 import CheckoutSuccess from "../pages/CheckoutSuccess";
 
+
+
+
 const Router = () => {
   return (
     <Routes>

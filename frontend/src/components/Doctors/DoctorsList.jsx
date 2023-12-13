@@ -10,7 +10,7 @@ const DoctorsList = () => {
     <>
       {loading && (
         <div className="flex items-center justify-center w-full h-full">
-          <HashLoader color="#0067FF" />
+          <HashLoader color="#9205C4" />
         </div>
       )}
 

@@ -39,7 +39,7 @@ const DoctorDetails = () => {
       <div className="max-w-[1170px] px-[20px] mx-auto">
         {loading && (
           <div className="flex items-center justify-center w-full h-full">
-            <HashLoader color="#0067FF" />
+            <HashLoader color="#9205C4" />
           </div>
         )}
 
@@ -56,10 +56,10 @@ const DoctorDetails = () => {
             <div className="md:col-span-2">
               <div className="flex gap-5 items-center">
                 <figure className="max-w-[200px] max-h-[200px]">
-                  <img src={photo} alt="" className="w-full" />
+                  <img src={photo} alt="" className="w-full rounded-[15px] pr-1" />
                 </figure>
                 <div>
-                  <span className="bg-[#CCF0F3] text-irisBlueColor py-1 px-4 lg:py-2 lg:px-6 rounded text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-[600]">
+                  <span className="bg-[#F485FF] bg-opacity-60 text-[#9205C4]  py-1 px-4 lg:py-2 lg:px-6 rounded text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-[600]">
                     {specialization}
                   </span>
                   <h3 className="text-headingColor text-[22px] leading-[36px] mt-3 font-bold">
@@ -79,26 +79,18 @@ const DoctorDetails = () => {
                 </div>
               </div>
 
-              <div className="mt-[50px] border-b border-solid border-[#0066ff34]">
+              <div className="mt-[50px] border-b border-solid border-[#9205C4]">
                 <div>
                   <button
                     onClick={() => setTab("about")}
                     className={`${
                       tab === "about" &&
-                      "border-b border-solid border-[#0067FF]"
+                      "border-b border-solid border-[#9205C4]"
                     }  p-2 mr-5 px-5  text-headingColor font-semibold text-[16px] leading-7  `}
                   >
-                    About
+                    Details
                   </button>
-                  <button
-                    onClick={() => setTab("feedback")}
-                    className={`${
-                      tab === "feedback" &&
-                      "border-b border-solid border-[#0067FF]"
-                    } py-2 px-5  font-semibold text-headingColor text-[16px] leading-7 `}
-                  >
-                    Feedback
-                  </button>
+
                 </div>
               </div>
 

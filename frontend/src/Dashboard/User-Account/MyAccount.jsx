@@ -31,7 +31,7 @@ const MyAccount = () => {
       <div className="max-w-[1170px] px-5 mx-auto">
         {loading && (
           <div className="flex items-center justify-center w-full h-full">
-            <HashLoader color="#0067FF" />
+            <HashLoader color="#9205C4" />
           </div>
         )}
         {error && !loading && (
@@ -46,11 +46,11 @@ const MyAccount = () => {
           <div className="grid md:grid-cols-3 gap-10 ">
             <div className=" px-[30px] pb-[50px] rounded-md  ">
               <div className="flex items-center justify-center">
-                <figure className="w-[100px] h-[100px] rounded-full border-2 border-solid border-[#0067FF]">
+                <figure className="w-[100px] h-[100px] rounded-full border-2 border-solid border-[#eaeaea]">
                   <img
                     src={userData?.photo}
                     alt=""
-                    className="w-full rounded-full"
+                    className="w-full h-full rounded-full "
                   />
                 </figure>
               </div>
@@ -64,7 +64,6 @@ const MyAccount = () => {
                 </p>
 
                 <p className="text-textColor text-[15px] leading-6 font-medium">
-                  Blood Type:
                   <span className="ml-2 text-headingColor text-[22px] leading-8">
                     {userData?.bloodType}
                   </span>
@@ -89,16 +88,16 @@ const MyAccount = () => {
                 <button
                   onClick={() => setTab("bookings")}
                   className={`${
-                    tab === "bookings" && "bg-[#0067FF] text-white font-normal"
-                  }  p-2 mr-5 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7  border border-solid border-[#0067FF]`}
+                    tab === "bookings" && "bg-[#9205C4] text-white font-normal"
+                  }  p-2 mr-5 px-5 rounded-md text-headingColor font-semibold text-[16px] leading-7  border border-solid border-[#9205C4]`}
                 >
                   My Bookings
                 </button>
                 <button
                   onClick={() => setTab("settings")}
                   className={`${
-                    tab === "settings" && "bg-[#0067FF] text-white font-normal"
-                  } py-2 px-5 rounded-md font-semibold text-headingColor text-[16px] leading-7  border border-solid border-[#0067FF]`}
+                    tab === "settings" && "bg-[#9205C4] text-white font-normal"
+                  } py-2 px-5 rounded-md font-semibold text-headingColor text-[16px] leading-7  border border-solid border-[#9205C4]`}
                 >
                   Settings
                 </button>
@@ -107,7 +106,7 @@ const MyAccount = () => {
               <div className="mt-[50px]">
                 {tab === "bookings" && (
                   <div>
-                    <h2 className="heading text-[30px]">My bookings</h2>
+                    <h2 className="heading text-[30px]">Booked Sessions</h2>
                     <MyBookings />
                   </div>
                 )}

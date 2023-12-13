@@ -73,7 +73,7 @@ const Profile = ({ userData }) => {
             value={formData.name}
             onChange={handleInputChange}
             placeholder="Full Name"
-            className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#0067FF] text-[16px] leading-7 text-headingColor placeholder:text-textColor"
+            className="w-full pr-4 py-3 border-b border-solid border-[#9205C4] focus:outline-none focus:border-b-[#0067FF] text-[16px] leading-7 text-headingColor placeholder:text-textColor"
           />
         </div>
         <div className="mb-5">
@@ -84,7 +84,7 @@ const Profile = ({ userData }) => {
             onChange={handleInputChange}
             name="email"
             placeholder="Enter Your Email"
-            className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#0067FF] text-[16px] leading-7 text-headingColor placeholder:text-textColor"
+            className="w-full pr-4 py-3 border-b border-solid border-[#9205C4] focus:outline-none focus:border-b-[#0067FF] text-[16px] leading-7 text-headingColor placeholder:text-textColor"
             aria-readonly
           />
         </div>
@@ -96,29 +96,18 @@ const Profile = ({ userData }) => {
             onChange={handleInputChange}
             name="password"
             placeholder="Password"
-            className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#0067FF] text-[16px] leading-7 text-headingColor placeholder:text-textColor"
-          />
-        </div>
-
-        <div className="mb-5">
-          <input
-            type="text"
-            value={formData.bloodType}
-            onChange={handleInputChange}
-            name="bloodType"
-            placeholder="Blood Group"
-            className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-[#0067FF] text-[16px] leading-7 text-headingColor placeholder:text-textColor"
+            className="w-full pr-4 py-3 border-b border-solid border-[#9205C4] focus:outline-none focus:border-b-[#9205C4] text-[16px] leading-7 text-headingColor placeholder:text-textColor"
           />
         </div>
 
         <div className="mb-5 flex items-center justify-between">
           <label className="text-headingColor font-bold text-[16px] leading-7]">
-            Gender:
+            Gender
             <select
               name="gender"
               value={formData.gender}
               onChange={handleInputChange}
-              className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
+              className="text-textColor font-semibold text-[15px] leading-7 px-4 py-2 focus:outline-none ml-4"
             >
               <option value="">Select</option>
               <option value="male">Male</option>
@@ -130,11 +119,11 @@ const Profile = ({ userData }) => {
 
         <div className="mb-5 flex items-center gap-3">
           {formData.photo && (
-            <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-[#0067FF] flex items-center justify-center">
+            <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-[#ebebeb] flex items-center justify-center">
               <img
                 src={formData.photo}
                 alt="Preview"
-                className="w-full rounded-full"
+                className="w-full h-full rounded-full"
               />
             </figure>
           )}
@@ -150,7 +139,7 @@ const Profile = ({ userData }) => {
             />
 
             <label
-              className="custom-file-label absolute top-0 left-0 w-full h-full flex items-center px-[0.75rem] py-[0.375rem] text-[15px] leading-6 overflow-hidden bg-[#0066ff46] text-headingColor font-semibold rounded-lg truncate cursor-pointer"
+              className=" absolute top-0 left-0 w-full h-full flex items-center px-[1.25rem] py-[0.375rem] text-[13px] leading-5 overflow-hidden border-[2px] bg-[transparent] text-[#1c1c1c] font-semibold rounded-lg truncate cursor-pointer hover:bg-[#f1f1f1] hover:border-none duration-300 ease-in-out"
               htmlFor="customFile"
             >
               {selectedFile ? selectedFile.name : "Upload Photo"}
@@ -161,7 +150,7 @@ const Profile = ({ userData }) => {
         <div className="mt-7">
           <button
             type="submit"
-            className="w-full bg-[#0067FF] text-white py-3 px-4 rounded-lg text-[18px] leading-[30px]"
+            className="w-full bg-[#9205C4] text-white py-3 px-4 rounded-lg text-[18px] leading-[30px]"
           >
             Update Profile
           </button>

@@ -239,9 +239,10 @@ const Profile = ({ doctorData }) => {
                 className="form__input py-3.5"
               >
                 <option value="">Select</option>
-                <option value="surgeon">Surgeon</option>
-                <option value="neurologist">Neurologist</option>
-                <option value="dermatologist">Dermatologist</option>
+                <option value="Cognitive Behavior Therapy">Cognitive Behavior Therapy</option>
+                <option value="Addiction Therapy">Addiction Therapy</option>
+                <option value="Clinical Therapy">Clinical Therapy</option>
+                <option value="Counseling Therapy">Counseling Therapy</option>
               </select>
             </div>
 
@@ -481,13 +482,13 @@ const Profile = ({ doctorData }) => {
           />
         </div>
 
-        <div className="mb-5 flex items-center gap-3">
+        <div className="mb-5 flex items-center gap-3 ">
           {formData.photo && (
-            <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-[#0067FF] flex items-center justify-center">
+            <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-gray flex items-center justify-center">
               <img
                 src={formData.photo}
                 alt="Preview"
-                className="w-full rounded-full"
+                className="w-full h-full rounded-full"
               />
             </figure>
           )}
@@ -503,7 +504,7 @@ const Profile = ({ doctorData }) => {
             />
 
             <label
-              className="custom-file-label absolute top-0 left-0 w-full h-full flex items-center px-[0.75rem] py-[0.375rem] text-[15px] leading-6 overflow-hidden bg-[#0066ff46] text-headingColor font-semibold rounded-lg truncate cursor-pointer"
+              className=" absolute top-0 left-0 w-full h-full flex items-center px-[1.25rem] py-[0.375rem] text-[13px] leading-5 overflow-hidden border-[2px] bg-[transparent] text-[#1c1c1c] font-semibold rounded-lg truncate cursor-pointer hover:bg-[#f1f1f1] hover:border-none duration-300 ease-in-out"
               htmlFor="customFile"
             >
               {selectedFile ? selectedFile.name : "Upload Photo"}
@@ -515,7 +516,7 @@ const Profile = ({ doctorData }) => {
           <button
             type="submit"
             onClick={updateDoctorHandler}
-            className="w-full bg-[#0067FF] text-white py-3 px-4 rounded-lg text-[18px] leading-[30px]"
+            className="w-full bg-[#9205C4] text-white py-3 px-4 rounded-lg text-[18px] leading-[30px]"
           >
             Update Profile
           </button>

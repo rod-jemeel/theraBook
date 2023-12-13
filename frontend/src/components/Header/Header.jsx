@@ -11,12 +11,8 @@ const navLinks = [
     display: "Home",
   },
   {
-    path: "/services",
-    display: "Services",
-  },
-  {
     path: "/doctors",
-    display: "Find a Doctor",
+    display: "Find a Therapist",
   },
   {
     path: "/contact",
@@ -57,28 +53,29 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* =========== logo ========== */}
           <div>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className="logosize"/>
           </div>
 
-          {/* ========== nav menu =========== */}
-          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
-            <ul className="menu flex items-center gap-[2.7rem]">
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <NavLink
-                    to={link.path}
-                    className={navClass =>
-                      navClass.isActive
-                        ? "text-[#0067FF] font-[600] text-[16px] leading-7"
-                        : "text-textColor font-[500] text-[16px] leading-7"
-                    }
-                  >
-                    {link.display}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </div>
+       {/* ========== nav menu =========== */}
+<div className="navigation relative" ref={menuRef} onClick={toggleMenu}>
+  <ul className="menu flex items-center gap-[2.7rem]">
+    {navLinks.map((link, index) => (
+      <li key={index} className="relative">
+        <NavLink
+          to={link.path}
+          className={navClass =>
+            navClass.isActive
+              ? "text-[#6505C4] font-[600] text-[14px] leading-7 relative group"
+              : "text-textColor font-[500] text-[14px] leading-7 relative group"
+          }
+        >
+          {link.display}
+          <span className="absolute left-0 bottom-0 w-full h-[1px] top-6 bg-[#6505C4] opacity-20 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 group-hover:transition-transform"></span>
+        </NavLink>
+      </li>
+    ))}
+  </ul>
+</div>
 
           {/* ========= nav right ========== */}
           <div className="flex items-center gap-4">
@@ -91,19 +88,20 @@ const Header = () => {
                       : "/users/profile/me"
                   } `}
                 >
-                  <figure className="w-[35px] h-[35px] rounded-full cursor-pointer ">
+                  <figure className="relative w-[35px] h-[35px] rounded-full cursor-pointer overflow-hidden group">
                     <img
-                      className="w-full rounded-full"
+                      className="w-full h-full rounded-full transition-transform transform group-hover:scale-110"
                       src={user?.photo}
                       alt=""
                     />
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                   </figure>
                 </Link>
               </div>
             ) : (
               <Link to="/login">
-                <button className="bg-buttonBgColor py-2 px-6 rounded-[50px] text-white font-[600] h-[44px] flex items-center justify-center">
-                  Log In
+                <button className="btn m-0 bg-[#1c1c1c] py-1 px-6 rounded-[5px] text-white font-[300] h-[36px] flex items-center justify-center hover:bg-[#2b2b2b] text-[14px]">
+                  Login
                 </button>
               </Link>
             )}

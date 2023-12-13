@@ -1,42 +1,31 @@
-import aboutImg from "../../assets/images/about.png";
-import aboutCardImg from "../../assets/images/about-card.png";
 import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section>
-      <div className="container">
-        <div className="flex justify-between flex-col  lg:flex-row gap-[50px] lg:gap-[130px] xl:gap-0 ">
-          {/* ========= about img ======== */}
-          <div className="relative z-10 w-3/4 lg:w-1/2  xl:w-[770px] order-2 lg:order-1">
-            <img src={aboutImg} alt="about_img" />
-            <div className=" w-[200px] md:w-[300px] absolute bottom-4 right-[-30%]  md:right-[-7%]  lg:right-[22%] z-20">
-              <img src={aboutCardImg} alt="" />
-            </div>
-          </div>
+    <section className="flex pt-[0px] pb-0 ">
+      {/* Left Side */}
+      <div className="w-1/2">
+        <div className=" bg-cover w-full h-full bg-[url('./assets/images/right-bg.jpg')] ">
+        </div>
+      </div>
 
-          {/* =========== about content ============ */}
-          <div className=" w-full lg:w-1/2 xl:w-[670px] order-1 lg:order-2">
-            <h2 className="heading">Proud to be one of the nations best</h2>
-            <p className="text__para">
-              For 30 years in a row, U.S. News & World Report has recognized us
-              as one of the best publics hospitals in the Nation and #1 in
-              Texas. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Quas, nemo?
-            </p>
-            <p className="text__para mt-[30px]">
-              Our best is something we strive for each day, caring for our
-              patients—not looking back at what we accomplished but towards what
-              we can do tomorrow. Providing the best. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Aliquid, modi?
-            </p>
-            <Link to="/">
-              <button className="btn">Learn More</button>
-            </Link>
-          </div>
+      {/* Right Side */}
+      <div className="w-1/2 flex flex-col justify-center  bg-[#0d0d0d]">
+        <div className="w-full lg:w-[770px] mx-auto justify p-[5rem] ">
+          <h2 className="heading font-extrabold text-[#f9f9f9]">What Exactly is <span className="text-[#9205C4] break-none">Therabook</span></h2>
+          <p className="text__para text-[#f9f9f9]">
+            <b>Therabook</b> is an innovative platform designed to streamline the process of connecting clients or patients with therapists, offering a convenient and efficient solution for scheduling appointments. By utilizing Therabook, individuals seeking therapeutic support can easily find and book sessions with qualified therapists, enhancing accessibility to mental health services.
+          </p>
+          <p className="text__para mt-[30px] text-[#f9f9f9]">
+            This platform not only facilitates the matchmaking between clients and therapists but also serves as a crucial component for our project CCS6, where it fulfills specific requirements to ensure the seamless execution and success of our broader initiatives. Therabook is not just a booking tool; it is a transformative resource that contributes to the accessibility and effectiveness of mental health care.
+          </p>
+          <Link to="/contact">
+            <button className="btn">Contact us</button>
+          </Link>
         </div>
       </div>
     </section>
+
   );
 };
 
