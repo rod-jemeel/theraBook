@@ -74,15 +74,6 @@ const Dashboard = () => {
                         <h3 className="text-headingColor text-[22px] leading-[36px] mt-3 font-bold">
                           {doctorData.name}
                         </h3>
-                        <div className="flex items-center gap-[6px]">
-                          <span className="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[600] text-[#1C1C1C]">
-                            <img src={starIcon} alt="" />{" "}
-                            {doctorData.averageRating}
-                          </span>
-                          <span className="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-1C1C1C opacity-70">
-                            ({doctorData.totalRating})
-                          </span>
-                        </div>
                         <p className="text__para text-[15px] leading-6 lg:max-w-[390px] text-[#1C1C1C]">
                           {doctorData.bio}
                         </p>
