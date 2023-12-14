@@ -140,7 +140,7 @@ const SignUp = () => {
                   required
                 >
                   <option value="patient">Patient</option>
-                  <option value="doctor">Doctor</option>
+                  <option value="doctor">Therapist</option>
                 </select>
               </div>
               <div className="flex items-center justify-between">
