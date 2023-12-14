@@ -23,7 +23,7 @@ const FeedbackForm = () => {
         return toast.error("Review fields are required!");
       }
 
-      const res = await fetch(`${BASE_URL}/doctors/${id}/reviews`, {
+      const res = await fetch(`${BASE_URL}/therapists/${id}/reviews`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

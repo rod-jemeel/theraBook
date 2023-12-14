@@ -45,7 +45,7 @@ app.use(cookieParser());
 
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/users", userRoute);
-app.use("/api/v1/doctors", doctorRoute);
+app.use("/api/v1/therapists", doctorRoute);
 app.use("/api/v1/reviews", reviewRoute);
 app.use("/api/v1/bookings", bookingRoute);
 

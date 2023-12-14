@@ -19,7 +19,7 @@ const Home = () => {
                 <p className="text__para">
                   Welcome to TheraBook your go-to destination for seamless therapy booking. Discover a simpler way to connect with skilled therapists and embark on your journey to well-being. With TheraBook, support is just a click away, making mental health care easy and accessible. Take the first step towards a happier, healthier you, explore TheraBook today.
                 </p>
-                <Link to="/doctors">
+                <Link to="/therapists">
                   <button className="btn">Find a Therapist</button>
                 </Link>
               </div>
