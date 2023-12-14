@@ -302,7 +302,7 @@ const Profile = ({ doctorData }) => {
                   </div>
 
                   <div>
-                    <p className="form__label">University*</p>
+                    <p className="form__label">Place of Work*</p>
                     <input
                       type="text"
                       name="university"
