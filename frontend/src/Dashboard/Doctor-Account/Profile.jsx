@@ -57,7 +57,7 @@ const Profile = ({ doctorData }) => {
     e.preventDefault();
     console.log(formData);
     try {
-      const res = await fetch(`${BASE_URL}/doctors/${doctorData._id}`, {
+      const res = await fetch(`${BASE_URL}/therapists/${doctorData._id}`, {
         method: "put",
         headers: {
           "content-type": "application/json",

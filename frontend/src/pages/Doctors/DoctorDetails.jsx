@@ -17,7 +17,7 @@ const DoctorDetails = () => {
     data: doctor,
     loading,
     error,
-  } = useFetchData(`${BASE_URL}/doctors/${id}`);
+  } = useFetchData(`${BASE_URL}/therapists/${id}`);
 
   const {
     name,
@@ -65,14 +65,6 @@ const DoctorDetails = () => {
                   <h3 className="text-headingColor text-[22px] leading-[36px] mt-3 font-bold">
                     {name}
                   </h3>
-                  <div className="flex items-center gap-[6px]">
-                    <span className="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[600] text-headingColor">
-                      <img src={starIcon} alt="" /> {averageRating}
-                    </span>
-                    <span className="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor">
-                      ({totalRating})
-                    </span>
-                  </div>
                   <p className="text__para text-[14px] md:text-[15px] leading-6 lg:max-w-[390px]">
                     {bio}
                   </p>

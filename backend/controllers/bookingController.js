@@ -2,6 +2,8 @@ import Booking from "../models/BookingSchema.js";
 import Doctor from "../models/DoctorSchema.js";
 import Stripe from "stripe";
 import User from "../models/UserSchema.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const getCheckoutSession = async (req, res) => {
   try {
@@ -15,7 +17,7 @@ export const getCheckoutSession = async (req, res) => {
       payment_method_types: ["card"],
       mode: "payment",
       success_url: `${process.env.CLIENT_SITE_URL}/checkout-success`,
-      cancel_url: `${req.protocol}://${req.get("host")}/doctor/${doctor.id}`,
+      cancel_url: `${req.protocol}://${req.get("host")}/therapists/${doctor.id}`,
       customer_email: user.email,
       client_reference_id: req.params.doctorId,
       line_items: [

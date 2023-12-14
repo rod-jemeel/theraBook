@@ -20,8 +20,8 @@ const Router = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/doctors" element={<Doctors />} />
-      <Route path="/doctors/:id" element={<DoctorDetails />} />
+      <Route path="/therapists" element={<Doctors />} />
+      <Route path="/therapists/:id" element={<DoctorDetails />} />
       <Route path="/services" element={<Services />} />
       <Route
         path="/users/profile/me"
@@ -32,7 +32,7 @@ const Router = () => {
         }
       />
       <Route
-        path="/doctors/profile/me"
+        path="/therapists/profile/me"
         element={
           <ProtectedRoute allowedRoles={["doctor"]}>
             <Dashboard />

@@ -14,7 +14,7 @@ const Dashboard = () => {
     data: doctorData,
     loading,
     error,
-  } = useGetProfile(`${BASE_URL}/doctors/profile/me`);
+  } = useGetProfile(`${BASE_URL}/therapists/profile/me`);
 
   return (
     <section>

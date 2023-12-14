@@ -13,7 +13,7 @@ const DoctorCard = ({ doctor }) => {
   } = doctor;
 
   return (
-    <Link to={`/doctors/${doctor._id}`} className="relative group">
+    <Link to={`/therapists/${doctor._id}`} className="relative group">
       <div className="relative z-0 p-3 lg:p-8 border-[2px] bg-[white] rounded-[15px] transition-transform duration-300 ease-in-out transform hover:scale-[120%] hover:z-10 hover:shadow-xl hover:translate-y-1">
         <div>
           <img className="w-full rounded-[15px]" src={photo} alt="" />

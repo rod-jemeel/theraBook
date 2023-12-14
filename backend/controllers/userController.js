@@ -99,7 +99,7 @@ export const getUserProfile = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Successfully ",
+      message: "Successfull ",
       data: { ...rest },
     });
   } catch (error) {
