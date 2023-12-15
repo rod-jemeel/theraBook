@@ -52,7 +52,7 @@ const Login = () => {
 
       setLoading(false);
       toast.success(result.message);
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       toast.error(error.message);
       setLoading(false);

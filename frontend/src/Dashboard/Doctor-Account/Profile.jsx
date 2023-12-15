@@ -302,7 +302,7 @@ const Profile = ({ doctorData }) => {
                   </div>
 
                   <div>
-                    <p className="form__label">Place of Work*</p>
+                    <p className="form__label">University*</p>
                     <input
                       type="text"
                       name="university"
@@ -374,13 +374,13 @@ const Profile = ({ doctorData }) => {
                   </div>
 
                   <div>
-                    <p className="form__label">University*</p>
+                    <p className="form__label">Place of Work*</p>
                     <input
                       type="text"
                       name="hospital"
                       value={item.hospital}
                       className="form__input"
-                      placeholder="Hospital"
+                      placeholder="Place of Work"
                       onChange={e => handleExperienceChange(e, index)}
                     />
                   </div>
